@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root{
+
+    --Nutmeg: hsl(14, 45%, 36%);
+    --DarkRasberry: hsl(332, 51%, 32%);
+    --White: hsl(0, 0%, 100%);
+    --RoseWhite: hsl(330, 100%, 98%);
+    --EggsHell: hsl(30, 54%, 90%);
+    --WengeBrown: hsl(30, 10%, 34%);
+    --DarkCharcoal: hsl(24, 5%, 18%);
+
+    font-family: "Young Serif", serif;
+    font-family: "Outfit", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1, h2{
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    color: var(--Nutmeg);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    font-family: "Outfit", sans-serif;
+    min-height: 100vh; 
+    height: 100vh;
+    padding: 5rem 0;
+    font-family: 1.6rem;
+    font-weight: 400;
+    overflow-x: hidden;
+
+    
+    background-color: var(--EggsHell);
+    color: var(--WengeBrown);
+}
+
+.container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto ;
+    padding: 4rem 2rem;
+    border-radius: 2rem;
+    background-color: var(--White);
+}
+
+.container, main section, .recipe p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 12px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+}
+
+#theme-toggle:hover {
+    background: #666;
+}
+
+
+.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .container {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode p{
+    color:var(--EggsHell);
+}
+.dark-mode .instructions strong{
+    color: var(--Nutmeg);
+}
+.dark-mode .ingredients p{
+    color: var(--EggsHell);
+}
+
+.dark-mode .instructions p {
+    color: var(--EggsHell);
+}
+.dark-mode ul li {
+    color: #ddd;
+}
+
+.dark-mode ul li {
+    border-color: #555;
+}
+
+.dark-mode footer p{
+    color: var(--EggsHell);
+}
+
+.dark-mode footer{
+    
+    background-color: #333;
+}
+
+
+
+.recipe img{
+    width: 100%;
+    max-width: 900px;
+    border-radius: 1.5rem;
+    display: block;
+}
+
+.recipe h1{
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    color: var(--DarkRasberry);
+}
+
+.recipe p{
+    margin-top: 1.5rem;
+}
+
+.recipe article{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 2.5rem 3rem;
+    margin-top: 3rem;
+    border-radius: 1rem;
+    background-color: var(--RoseWhite);
+    color: var(--DarkRasberry);
+}
+
+.recipe article li{
+    font-size: 1.3rem;
+    margin-left: 3rem;
+    font-size: 1.6;
+}
+
+.recipe article h2{
+    font-family: "Outfit", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--DarkRasberry);
+}
+
+.recipe article p {
+    font-size: 1.6rem;
+    color: var(--WengeBrown);
+}
+main section{
+    border-bottom: .1rem lightgray solid;
+    padding-block: 2.5rem;
+}
+
+main section ul {
+    display: flex;
+    flex-direction: column;
+    list-style: square;
+    gap: 1rem;
+
+}
+
+main section p {
+    margin-left: 2rem;
+}
+
+.ingredients li{
+    font-size: 1.1rem;
+    margin-left: 3rem;
+    color: var(--Nutmeg);
+}
+.ingredients h2{
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.ingredients p{
+    font-size: 1.3rem ;
+    color: var(--WengeBrown);
+}
+
+.instructions  ul { 
+    list-style: decimal;    
+    font-weight: 700;
+    margin-left: 3rem;
+    color: var(--Nutmeg);
+}
+
+.instructions p {
+    font-weight: 400;
+    color: var(--WengeBrown);
+}
+
+.instructions h2{
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.nutrition{
+    border-bottom: none;
+}
+
+.nutrition h2{
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.nutrition p {
+    margin: 0 0 3rem 0;
+}
+
+.nutrition li{
+    display: flex;
+    border-bottom: .1rem  lightgray solid;
+    padding-block: 1.3rem;
+}
+
+.nutrition li:last-child{
+    border-bottom: none;
+    padding-block: 0;
+
+}
+.nutrition h3{
+    font-size: 1.4rem;
+    font-weight: 400;
+    width: 50%;
+    margin-left: 2.5rem;
+}
+
+.nutrition span{
+    font-weight: 700;
+    color: var(--Nutmeg);
+}
+
+footer{
+    font-family: "Outfit", sans-serif;
+    
+        text-align: center;
+        padding: 1rem;
+
+        width: 100%;
+    
+}
+
+footer a{
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--Nutmeg);
+}
+
+a:hover{
+    color: var(--DarkRasberry);
+    font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 900px;
+        padding: 3rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .container {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .recipe img {
+        border-radius: 0.5rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}
